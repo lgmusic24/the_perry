@@ -1,0 +1,54 @@
+
+<script>
+function msg() {
+    alert("Correct!")
+  }
+</script>
+
+
+
+
+<%= @story.name %>
+<div class ="character">
+  <% @story.characters.each do |character| %>
+  <h2><%= character.name %></h2>
+  <img src="<%= character.img_url %>">
+   <p><%= character.description %></p>
+  <% end %>
+ </div>
+
+ <!--if killer is correct [then]
+ console.log("correct")
+ [elsif killer is wrong [then]
+ console.log("wrong")] -->
+
+
+
+<h3>Guess Who Did it and Who Died</h3>
+
+ <button type="button"
+ onclick="document.getElementById('demo').innerHTML = death()">
+ Victim</button>
+ <textarea name="victim"></textarea>
+
+ <p id="demo"></p>
+
+ <form>
+   <input type="button" value="killer" onclick="msg()">
+ </form>
+
+
+ <!-- if killer is correct [then]
+  console.log("correct")
+ elsif killer is wrong [then]
+  console.log("wrong") -->
+
+ <button type="button"
+ onclick="document.getElementById('demo').innerHTML = death()">Killer</button>
+<textarea name="killer"></textarea>
+
+<p id="demo"></p>
+
+<form>
+  <input type="button" value="victim" onclick="msg()">
+</form>

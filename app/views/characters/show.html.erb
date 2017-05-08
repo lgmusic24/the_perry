@@ -1,0 +1,32 @@
+<h1><%= @character.name %></h1>
+<h2><%= @character.story.name %></h2>
+<div class="character">
+  <%= @character.name.id %>
+  <%= image_tag @character.img_url %>
+
+
+<body>
+
+<p>
+<button onclick ="@character.img_url()"</button>
+</p>
+
+<div id="myContainer">
+<div id= "myAnimation">
+
+<script>
+  var elem = docmument.getElementById("character.img_url")
+  var pos = 0;
+  var id = setInterval(frame,10);
+  function frame(){
+    if(pos == 350){
+      clearInterval(id);
+    }else{
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+</script>
+</div>
