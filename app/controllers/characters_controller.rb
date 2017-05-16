@@ -27,6 +27,7 @@ end
 
 def show
   @character = Character.find(params[:id])
-  
+  @story = Story.find(params[:id])
+
  end
 end
